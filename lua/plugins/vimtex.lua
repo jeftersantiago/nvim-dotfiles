@@ -11,6 +11,8 @@ return{
     vim.keymap.set('n', '<leader>o', ':VimtexView <CR>', {})
     vim.keymap.set('n', '<leader>o', ':VimtexView <CR>', {})
 
+    vim.keymap.set("n", "<leader>lc", ":!pdflatex -interaction=nonstopmode --shell-escape %<CR>", { noremap = true, silent = true })
+
   end
 }
 
