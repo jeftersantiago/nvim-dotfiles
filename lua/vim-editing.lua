@@ -1,5 +1,5 @@
 -- track white spaces
-vim.cmd("autocmd BufWritePre * %s/\\s\\+$//e")
+--vim.cmd("autocmd BufWritePre * %s/\\s\\+$//e")
 
 -- compile when save
 vim.cmd("autocmd BufWritePost ~/.Xresources,~/.Xdefaults !xrdb %")
@@ -17,13 +17,16 @@ vim.cmd("autocmd BufWritePost ~/.Xresources,~/.Xdefaults !xrdb %")
 vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
 
 -- Paste from the system clipboard in normal mode
-vim.api.nvim_set_keymap('n', '<C-v>', '"+P', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-i>', '"+P', { noremap = true, silent = true })
 
 -- Paste from the system clipboard in insert mode
-vim.api.nvim_set_keymap('i', '<C-v>', '<C-r>+', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('i', '<C-i>', '<C-r>+', { noremap = true, silent = true })
 
 
 
-
-
+-- move between panes
+vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
+vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
+vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
+vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 
